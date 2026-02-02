@@ -71,6 +71,8 @@ namespace ItemChanger.Silksong
             if (to.name == "Menu_Title")
             {
                 lifecycleInvoker?.NotifyOnLeaveGame();
+                ActiveProfile?.Dispose();
+                ActiveProfile = null;
                 return;
             }
 
